@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Miembros</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <!-- Panel lateral izquierdo -->
+    <aside class="sidebar">
+        <h3>Panel de Configuración</h3>
+        <ul>
+            <li>Opciones</li>
+            <li>Configuraciones</li>
+            <li>Más funcionalidades</li>
+        </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <h1>Gestión de Miembros</h1>
+
+        <div class="panels">
+            <!-- Panel de creación -->
+            <section class="panel">
+                <h2 class="panel-header">Nuevo Miembro</h2>
+                <div class="panel-content">
+                    <form id="create-form">
+                        <input type="text" id="nombre" placeholder="Nombre" required>
+                        <input type="text" id="apellido" placeholder="Apellido" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <label>
+                            Activo:
+                            <select id="activo_crear">
+                                <option value="" selected disabled>-</option>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </select>
+                        </label>
+                        <button type="submit">Crear</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Panel de consulta -->
+            <section class="panel">
+                <h2 class="panel-header">Consultar Miembro</h2>
+                <div class="panel-content">
+                    <form id="search-member-form">
+                        <input type="number" id="search-member-id" placeholder="ID del Miembro" min="1" required>
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <div id="member-info"></div>
+                </div>
+            </section>
+
+            <!-- Panel de actualización -->
+            <section class="panel">
+                <h2 class="panel-header">Actualizar Miembro</h2>
+                <div class="panel-content">
+                    <form id="update-form">
+                        <input type="number" id="update-id" placeholder="ID" min="1" step="1" required>
+                        <input type="text" id="update-nombre" placeholder="Nuevo Nombre">
+                        <input type="text" id="update-apellido" placeholder="Nuevo Apellido">
+                        <input type="email" id="update-email" placeholder="Nuevo Email">
+                        <label>
+                            Activo:
+                            <select id="activo_actualizar">
+                                <option value="" selected disabled>-</option>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </select>
+                        </label>
+                        <button type="submit">Actualizar</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Panel de eliminación -->
+            <section class="panel">
+                <h2 class="panel-header">Eliminar Miembro</h2>
+                <div class="panel-content">
+                    <form id="delete-form">
+                        <input type="number" id="delete-id" placeholder="ID" min="1" step="1" required>
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<script src="js/Script.js" type="module"></script>
+</body>
+</html>

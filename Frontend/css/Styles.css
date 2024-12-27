@@ -1,0 +1,191 @@
+body, .miembro-card {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #eef1fb;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+h2 {
+    text-align: center;
+}
+
+form, section {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+form input, form button {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+button {
+    cursor: pointer;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* General Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and Button Styles */
+input, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus, button:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Checkbox Label Styles */
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    position: relative;
+}
+select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+#list-section {
+    position: relative; /* Base para posicionamiento absoluto */
+}
+
+#list-members {
+    display: block;
+    margin: 10px auto; /* Centra horizontalmente */
+}
+/* Contenedor de toda la lista */
+#members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0;
+}
+
+/* Estilo para cada tarjeta de miembro */
+.miembro-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif; /* Cambiar tipografía */
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Cambiar diseño al pasar el mouse */
+.miembro-card:hover {
+    background-color: #eef1fb;
+    transform: translateY(-3px);
+}
+
+/* Estilo para cada fila de datos */
+.miembro-campo {
+    padding: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.miembro-campo:last-child {
+    border-bottom: none; /* Quitar el borde del último elemento */
+}
+#search-member-section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.miembro-card {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.miembro-campo {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Botón de cerrar - hover */
+.close-button:hover {
+    color: #000;
+}

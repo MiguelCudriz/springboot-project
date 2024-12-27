@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Miembros</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Gestión de Miembros</h1>
+
+<section id="create-section">
+    <h2>Nuevo Miembro</h2>
+    <form id="create-form">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <label>
+            Activo:
+            <select id="activo_crear">
+                <option value="" selected disabled>-</option>
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+        </label>
+        <button type="submit">Crear</button>
+    </form>
+</section>
+
+<section id="search-member-section">
+    <h2>Consultar Miembro</h2>
+    <form id="search-member-form">
+        <input type="number" id="search-member-id" placeholder="ID del Miembro" min="1" required>
+        <button type="submit">Buscar</button>
+    </form>
+    <div id="member-info"></div>
+</section>
+
+
+<section id="update-section">
+    <h2>Actualizar Miembro</h2>
+    <form id="update-form">
+        <input type="number" id="update-id" placeholder="ID" min="1" step="1" required>
+        <input type="text" id="update-nombre" placeholder="Nuevo Nombre">
+        <input type="text" id="update-apellido" placeholder="Nuevo Apellido">
+        <input type="email" id="update-email" placeholder="Nuevo Email">
+        <label>
+            Activo:
+            <select id="activo_actualizar">
+                <option value="" selected disabled>-</option>
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+        </label>
+        <button type="submit">Actualizar</button>
+    </form>
+</section>
+
+<section id="delete-section">
+    <h2>Eliminar Miembro</h2>
+    <form id="delete-form">
+        <input
+                type="number"
+                id="delete-id"
+                placeholder="ID"
+                min="1"
+                step="1"
+                required>
+        <button type="submit">Eliminar</button>
+    </form>
+</section>
+
+<script src="js/Script.js" type="module"></script>
+
+</body>
+</html>

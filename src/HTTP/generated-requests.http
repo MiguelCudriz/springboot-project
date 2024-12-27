@@ -1,0 +1,36 @@
+### Crear un nuevo miembro ###
+POST http://localhost:8080/miembros/crear
+Content-Type: application/json
+
+{
+  "nombre": "nuevo",
+  "apellido": "nuevo",
+  "email": "nuevo@ejemplo.com",
+  "activo": true
+}
+
+###
+
+### Obtener un miembro por ID ###
+GET http://localhost:8080/miembros/{id}
+# Sustituye {id} con el ID del miembro que deseas obtener.
+
+###
+
+### Actualizar un miembro existente ###
+PUT http://localhost:8080/miembros/actualizar/{id}
+Content-Type: application/json
+
+{
+  "nombre": "Nuevo Nombre",
+  "apellido": "Nuevo Apellido",
+  "email": "nuevo@correo.com",
+  "activo": true
+}
+
+
+###
+
+### Eliminar un miembro por ID ###
+DELETE http://localhost:8080/miembros/eliminar/{id}
+# Sustituye {id} con el ID del miembro que deseas eliminar.
